@@ -1,0 +1,22 @@
+body {
+  background-color: black;
+  color: whitesmoke;
+  font-family: "Helvetica Neue", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+a {
+  color: whitesmoke;
+  text-decoration: none;
+  font-style: italic;
+}
+
+.app-footer {
+  text-align: center;
+  font-style: italic;
+  margin: 30px 0;
+}

@@ -1,0 +1,46 @@
+.dictionary-form {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  max-width: 100%;
+}
+
+.dictionary-form label {
+  color: #aaa;
+  font-size: 16px;
+  margin-right: 8px;
+  white-space: nowrap;
+}
+
+.dictionary-form input {
+  flex: 1;
+  padding: 12px 16px;
+  font-size: 16px;
+  background-color: #111;
+  color: #fff;
+  border: 1px solid #333;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.dictionary-form button {
+  padding: 14px 28px;
+  font-size: 16px;
+  background-color: #dcd4d4;
+  color: #000000;
+  border: none;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.1);
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.dictionary-form button:hover {
+  transform: translateY(-2px) scale(1.03);
+  background-color: #f3f3f3;
+  box-shadow: 0 4px 14px rgba(255, 255, 255, 0.2);
+}
