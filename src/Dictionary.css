@@ -62,3 +62,24 @@ section {
 .word {
   text-transform: uppercase;
 }
+.synonyms-container {
+  margin-top: 1rem;
+}
+
+.synonyms {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  list-style: none;
+  padding: 0;
+  margin-top: 0.5rem;
+}
+
+.synonyms li {
+  padding: 10px 12px;
+  font-size: 14px;
+  background-color: #dcd4d4;
+  color: #000000;
+  border: none;
+  border-radius: 9999px;
+}
