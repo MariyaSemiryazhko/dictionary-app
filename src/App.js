@@ -9,7 +9,7 @@ function App() {
       
       </header>
         <main>
-          <Dictionary />
+          <Dictionary defaultKeyword="wine"/>
       </main>
       <footer className="app-footer"> <a href="https://github.com/MariyaSemiryazhko/dictionary-app" target="_blank" rel="noopener noreferrer"> Open-sourced </a> on <a href="https://rainbow-strudel-171435.netlify.app/" target="_blank" rel="noopener noreferrer">Netlify </a> </footer>
     </div>

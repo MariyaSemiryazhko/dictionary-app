@@ -3,22 +3,27 @@ import axios from "axios";
 import "./Dictionary.css"
 import Results from "./Results.js"
 
-export default function Dictionary() {
-    let [keyword, setKeyword] = useState("");
+export default function Dictionary(props) {
+    let [keyword, setKeyword] = useState(props.defaultKeyword);
     let [results, setResults] = useState(null);
+    let [loaded, setLoaded] = useState(false);
 
 
     function handleResponse(response) {
         setResults(response.data);
     }
 
-
-    function Search(event) {
-        event.preventDefault();
-
+    function search() {
         //documentation: https://www.shecodes.io/learn/apis/dictionary
         let apiUrl = `https://api.shecodes.io/dictionary/v1/define?word=${keyword}&key=21b0o158462fba6c2a0f6eca1t37c8ec`
         axios.get(apiUrl).then(handleResponse);
+        
+    }
+
+
+    function handleSubmit(event) {
+        event.preventDefault();
+        search();        
     }
 
     function handleKeywordChange(event) {
@@ -26,15 +31,27 @@ export default function Dictionary() {
     }
 
 
+    function load() {
+        setLoaded(true);
+        search();    }
 
-    return (
-        <div className="Dictionary">
-            <form className="dictionary-form" onSubmit={Search}>
-            <label for="word">Enter a word</label>
-                <input type="search"  placeholder="e.g., serendipity" onChange={handleKeywordChange}/>
-                <button type="submit">Search</button>    
-            </form>
-            <Results results={results} />
-        </div>
-    ) 
+    if (loaded) {
+        return (
+            <div className="Dictionary">
+                <form className="dictionary-form" onSubmit={handleSubmit}>
+                <label for="word">Enter a word</label>
+                    <input type="search"  placeholder="e.g., serendipity" onChange={handleKeywordChange}/>
+                    <button type="submit">Search</button>    
+                </form>
+                <Results results={results} />
+            </div>
+        ) 
+    } else {
+        load();
+        return "Loading..."
+    }
+
+
+
+   
 }

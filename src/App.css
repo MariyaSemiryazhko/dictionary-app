@@ -16,7 +16,7 @@ body {
   border-radius: 16px;
   box-shadow: 0 0 32px rgba(255, 255, 255, 0.05),
     0 0 8px rgba(255, 255, 255, 0.03);
-  max-width: 800px;
+  max-width: 1000px;
   margin: 64px auto;
 }
 
