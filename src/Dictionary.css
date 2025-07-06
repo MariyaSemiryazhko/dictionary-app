@@ -83,3 +83,42 @@ section {
   border: none;
   border-radius: 9999px;
 }
+
+@media (max-width: 600px) {
+  .dictionary-form {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+    margin-top: 32px;
+  }
+
+  .dictionary-form label {
+    margin-bottom: 4px;
+    font-size: 14px;
+  }
+
+  .dictionary-form input,
+  .dictionary-form button {
+    width: 100%;
+    font-size: 15px;
+    padding: 12px;
+  }
+
+  .dictionary-form button {
+    padding: 12px;
+  }
+
+  section {
+    padding: 20px;
+    margin: 16px 0;
+  }
+
+  .synonyms li {
+    font-size: 13px;
+    padding: 8px 10px;
+  }
+
+  .example-text {
+    font-size: 14px;
+  }
+}

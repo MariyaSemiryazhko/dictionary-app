@@ -31,3 +31,14 @@ a {
   font-style: italic;
   margin: 30px 0;
 }
+
+@media (max-width: 600px) {
+  .container {
+    padding: 24px 16px;
+    margin: 32px 16px;
+  }
+  .app-footer {
+    font-size: 14px;
+    margin: 20px 0;
+  }
+}
